@@ -104,7 +104,7 @@ namespace NSOAddDataToMongo
                             Console.WriteLine($"{listBlobExist.Count}/{total}");
 
                             var def = Builders<BlobExistModel>.Update.Set(it => it.IsRun, true);
-                            CollectionBlobExist.UpdateOne(it => it._id == containerHDD.containerName, def);
+                            CollectionBlobExist.UpdateOne(it => it._id == containerDB._id, def);
                         }
                     }
                 }
